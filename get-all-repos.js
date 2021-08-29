@@ -2,14 +2,17 @@ const got = require("got");
 const { execSync } = require("child_process");
 const path = require("path");
 const fs = require("fs-extra");
-const argv = require("minimist")(process.argv.slice(2));
-const p = argv.p || argv.path || process.cwd();
 require("dotenv").config();
 
 (async () => {
   // https://github.com/settings/tokens
   // type should be orgs or users, name is your orgs_name or user_name
-  const { access_token, type = "orgs", name = "devsapp" } = process.env;
+  const {
+    access_token,
+    type = "orgs",
+    name = "devsapp",
+    path: p = process.cwd(),
+  } = process.env;
   let page = 1;
   let data = [];
   let condition = false;
