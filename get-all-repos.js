@@ -8,7 +8,6 @@ require("dotenv").config();
 
 (async () => {
   // https://github.com/settings/tokens
-
   // type should be orgs or users, name is your orgs_name or user_name
   const { access_token, type = "orgs", name = "devsapp" } = process.env;
   let page = 1;

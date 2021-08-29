@@ -1,3 +1,5 @@
+# git clone all repos at once from github, if the repos has been downloaded, i will exec git pull to get latest code
+
 # 1. install
 
 ```bash
