@@ -1,0 +1,26 @@
+{
+  "name": "cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "get-all-repos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xsahxl/cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xsahxl/cli/issues"
+  },
+  "homepage": "https://github.com/xsahxl/cli#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "fs-extra": "^10.0.0",
+    "got": "^11.8.2",
+    "minimist": "^1.2.5"
+  }
+}
