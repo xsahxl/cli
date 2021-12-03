@@ -7,19 +7,14 @@ require("dotenv").config();
 (async () => {
   // https://github.com/settings/tokens
   // type should be orgs or users, name is your orgs_name or user_name
-  const {
-    access_token,
-    type = "orgs",
-    name = "devsapp",
-    path: p = process.cwd(),
-  } = process.env;
+  const { access_token, type = "orgs", name = "devsapp", path: p = process.cwd() } = process.env;
   let page = 1;
   let data = [];
   let condition = false;
   console.log("start...");
 
   do {
-    const url = `https://api.github.com/${type}/${name}/repos?access_token=${access_token}&per_page=100&page=${page}`;
+    const url = `https://api.github.com/${type}/${name}/repos?per_page=100&page=${page}`;
     const res = await got(url);
     const body = JSON.parse(res.body);
     condition = body.length > 0;
